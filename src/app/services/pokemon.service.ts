@@ -14,7 +14,7 @@ export class PokemonService {
   constructor(private http: HttpClient) { }
 
   getAllImages():Observable<any> {    
-    return this.http.get<any>(this.url + '?limit=10');                        
+    return this.http.get<any>(this.url);                        
   }
   
   getIdImage(id:string): Observable<any> {        

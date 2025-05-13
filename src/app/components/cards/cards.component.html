@@ -1,6 +1,8 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+
 <div class="container">
      <h1>Pokemon Card</h1>         
-        <div class="content">
+        <div class="content" [@fadeInOut]>
             <mat-card class="mat-elevation-z4" *ngFor="let poke of images; let indice=index">
                 <a [routerLink]="['/pokemon', indice+1]" class="text-decoration-none">
                     <mat-card-header>

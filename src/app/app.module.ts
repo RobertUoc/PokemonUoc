@@ -10,6 +10,7 @@ import { CardsComponent } from './components/cards/cards.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
-    })
+    }),
+    MatProgressSpinnerModule,    
   ],
   providers: [],
   bootstrap: [AppComponent]
